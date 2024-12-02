@@ -1,5 +1,5 @@
 
-import Navbar from './Components/navbar'
+import Navbar from './Components/Navbar'
 
 
 
