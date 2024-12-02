@@ -64,7 +64,8 @@
 }
 
 .about-section,
-.booking-section {
+.booking-section,
+.events-section {
   padding: 0.5rem;
   display: flex;
   justify-content: center;
@@ -73,10 +74,12 @@
 }
 
 .about-section h2,
-.booking-section h2 {
+.booking-section h2,
+.events-section h2 {
   text-align: center;
   margin: 5px 0 15px 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  text-transform: capitalize;
 }
 
 .booking-section .MuiButton-root {
@@ -84,6 +87,41 @@
  align-self: center;
  width: 8rem;
 }
+
+.events-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.event-card {
+  padding: 1rem;
+  text-align: center;
+  width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+}
+
+.event-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.event-footer {
+  margin-top: 1.5rem;
+}
+
+.events-section .MuiButton-root {
+  width: 8rem;
+ }
+
+
 
 
 
