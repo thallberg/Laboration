@@ -1,10 +1,11 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 const BookingPage = () => {
   return (
-    <div>
-      hejdan
-    </div>
+    <Box>
+     
+    </Box>
   )
 }
 

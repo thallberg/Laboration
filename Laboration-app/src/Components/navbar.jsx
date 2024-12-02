@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
+import {
+  AppBar,
+  Box,
+  IconButton,
+  Toolbar,
+  Typography,
+  List,
+  ListItem,
+  ListItemText,
+  Drawer,
+  Divider,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import { Link, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -21,15 +25,18 @@ const Navbar = () => {
   const DrawerList = (
     <Box sx={{ width: 200 }} role="presentation">
       <List>
-        <ListItem>
-          <Link to="/">
+      <ListItem button>
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
             <ListItemText primary="Hem" />
           </Link>
         </ListItem>
         <Divider />
 
         <ListItem button>
-          <Link to="/booking">
+          <Link
+            to="/booking"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
             <ListItemText primary="Boka" />
           </Link>
         </ListItem>
@@ -40,21 +47,17 @@ const Navbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-       <AppBar className="navbar" position="fixed">
-        <Toolbar>
+      <AppBar className="navbar" position="fixed">
+      <Toolbar className="toolbar">
           <Box sx={{ display: "flex", gap: 2 }}>
-            <Link
-              className="navbar-links"
-              to="/"
-              style={{color: "inherit" }}
-            >
+            <Link className="navbar-links" to="/" style={{ color: "inherit" }}>
               <Typography variant="h6" component="div">
                 Hem
               </Typography>
             </Link>
             <Link
-              className="navbar-links"
               to="/booking"
+              className="navbar-links"
               style={{ color: "inherit" }}
             >
               <Typography variant="h6" component="div">
