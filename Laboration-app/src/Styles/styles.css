@@ -10,6 +10,12 @@
 
 .navbar {
   background: linear-gradient(180deg, #5773f0 0%, #626265 100%) !important;
+  height: 5vh;
+}
+
+.toolbar {
+  padding: 0!important;
+ 
 }
 
 .footer {
@@ -18,6 +24,12 @@
 
 .navbar-links {
   display: none;
+}
+
+.hamburgermenu {
+  margin-left: auto!important;
+  margin-bottom: 25px!important;
+
 }
 
 .header {
@@ -126,13 +138,22 @@
 
 
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .navbar-links {
     display: inline-block;
-    margin-left: auto;
-    margin-right: 1rem;
+    margin-right: 2rem; 
+    text-decoration: none; 
   }
 
+  .navbar-links:hover {
+    transform: scale(1.1);
+    text-decoration: underline 1px solid red;
+  }
+
+  .links-content {
+    margin-left: auto; 
+    margin-bottom: 1.8rem; /* Avstånd från andra element i botten */
+  }
   .hamburgermenu {
     display: none !important;
   }

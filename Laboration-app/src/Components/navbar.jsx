@@ -51,9 +51,9 @@ const Navbar = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar className="navbar" position="fixed">
       <Toolbar className="toolbar">
-          <Box sx={{ display: "flex", gap: 2 }}>
+          <Box className="links-content">
             <Link className="navbar-links" to="/" style={{ color: "inherit" }}>
-              <Typography variant="h6" component="div">
+              <Typography variant="h6" >
                 Hem
               </Typography>
             </Link>
@@ -62,19 +62,17 @@ const Navbar = () => {
               className="navbar-links"
               style={{ color: "inherit" }}
             >
-              <Typography variant="h6" component="div">
+              <Typography variant="h6" >
                 Boka
               </Typography>
             </Link>
           </Box>
           <IconButton
             className="hamburgermenu"
-            style={{ marginLeft: "auto" }}
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
             onClick={() => toggleDrawer(true)()}
           >
             <MenuIcon />
