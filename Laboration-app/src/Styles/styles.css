@@ -4,18 +4,28 @@
   box-sizing: border-box;
 }
 
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
 .boldtext {
   font-weight: bold;
 }
 
+
 .navbar {
   background: linear-gradient(180deg, #5773f0 0%, #626265 100%) !important;
-  height: 5vh;
+  height: 35px;
 }
 
+
+
 .toolbar {
-  padding: 0!important;
- 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer {
@@ -63,7 +73,7 @@
 
 .section-paper {
   padding: 1rem;
-  max-width: 700px; 
+  max-width: 750px; 
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -79,10 +89,12 @@
 .booking-section,
 .events-section {
   padding: 0.5rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
+  flex-wrap: wrap;
 }
 
 .about-section h2,
@@ -105,7 +117,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 10px;
 }
 
 .event-card {
@@ -115,7 +127,8 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  overflow: hidden;
+  
+  border: 1px solid black;
 }
 
 .event-image {
@@ -152,7 +165,7 @@
 
   .links-content {
     margin-left: auto; 
-    margin-bottom: 1.8rem; /* Avstånd från andra element i botten */
+    margin-bottom: 1.8rem; /
   }
   .hamburgermenu {
     display: none !important;

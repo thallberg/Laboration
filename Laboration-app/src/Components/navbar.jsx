@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar className="navbar" position="fixed">
+      <AppBar className="navbar" position="sticky" >
       <Toolbar className="toolbar">
           <Box className="links-content">
             <Link className="navbar-links" to="/" style={{ color: "inherit" }}>
