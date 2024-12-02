@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed">
+       <AppBar className="navbar" position="fixed">
         <Toolbar>
           <Box sx={{ display: "flex", gap: 2 }}>
             <Link

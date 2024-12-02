@@ -2,7 +2,9 @@ import React from 'react'
 
 const BookingPage = () => {
   return (
-    <div>BookingPage</div>
+    <div>
+      hejdan
+    </div>
   )
 }
 

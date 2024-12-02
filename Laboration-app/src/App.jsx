@@ -1,5 +1,10 @@
+import { Routes, Route } from "react-router-dom"
 
-import Navbar from './Components/Navbar'
+import "./Styles/Styles.css"
+
+import HomePage from "./Pages/HomePage"
+
+
 
 
 
@@ -8,7 +13,10 @@ function App() {
 
   return (
     <>
- <Navbar/>
+    <HomePage/>
+   
+  
+
     </>
   )
 }
