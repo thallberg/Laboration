@@ -18,6 +18,10 @@ body {
   color: red;
 }
 
+.green-span {
+  color: green;
+}
+
 .navbar {
   background: linear-gradient(180deg, #5773f0 0%, #626265 100%) !important;
   height: 35px;
