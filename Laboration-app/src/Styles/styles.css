@@ -5,21 +5,19 @@
 }
 
 body {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: rgb(234, 234, 234);
 }
 
 .boldtext {
   font-weight: bold;
 }
 
-
 .navbar {
   background: linear-gradient(180deg, #5773f0 0%, #626265 100%) !important;
   height: 35px;
 }
-
-
 
 .toolbar {
   width: 100%;
@@ -30,6 +28,7 @@ body {
 
 .footer {
   background: linear-gradient(180deg, #626265 0%, #5773f0 100%) !important;
+  padding: 2rem;
 }
 
 .navbar-links {
@@ -37,15 +36,15 @@ body {
 }
 
 .hamburgermenu {
-  margin-left: auto!important;
-  margin-bottom: 25px!important;
-
+  margin-left: auto !important;
+  margin-bottom: 25px !important;
 }
 
 .header {
   position: relative;
-  width: 100%;
-  height: 50vh;
+  width: 95%;
+  margin: auto;
+  height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +58,7 @@ body {
 
 .header-title {
   position: absolute;
-  top: 5vh;
+  top: 1vh;
   left: 50%;
   transform: translateX(-50%);
   color: white;
@@ -73,7 +72,7 @@ body {
 
 .section-paper {
   padding: 1rem;
-  max-width: 750px; 
+  max-width: 750px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -107,9 +106,9 @@ body {
 }
 
 .booking-section .MuiButton-root {
- margin-top: 1rem;
- align-self: center;
- width: 8rem;
+  margin-top: 1rem;
+  align-self: center;
+  width: 8rem;
 }
 
 .events-container {
@@ -127,7 +126,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  
+
   border: 1px solid black;
 }
 
@@ -144,18 +143,13 @@ body {
 
 .events-section .MuiButton-root {
   width: 8rem;
- }
-
-
-
-
-
+}
 
 @media (min-width: 700px) {
   .navbar-links {
     display: inline-block;
-    margin-right: 2rem; 
-    text-decoration: none; 
+    margin-right: 2rem;
+    text-decoration: none;
   }
 
   .navbar-links:hover {
@@ -164,10 +158,37 @@ body {
   }
 
   .links-content {
-    margin-left: auto; 
-    margin-bottom: 1.8rem; /
+    margin-left: auto;
+    margin-bottom: 1.8rem;
   }
   .hamburgermenu {
     display: none !important;
   }
 }
+
+/* @media (min-width: 1024px) {
+  .header {
+    width: 95%;
+    height: 95vh;
+    animation: blurIn 1s ease-out forwards;
+  }
+
+  .header-title {
+    position: absolute;
+    top: 80%;
+    width: 70%;
+    font-size: 2rem !important;
+    padding: 3rem;
+  }
+
+  @keyframes blurIn {
+    0% {
+      filter: blur(10px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+} */
