@@ -9,7 +9,7 @@ const Booking = () => {
         <Typography variant="h2">
           Boka ditt besök</Typography>
 
-        <Typography variant="body1" >
+        <Typography variant="body1" component="div" >
           Upplev skönheten hos de isländska hästarna! Klicka på knappen nedan
           för att boka ditt besök. Följ med oss på en oförglömlig upplevelse med
           de isländska hästarna. Oavsett om du är intresserad av ridning eller

@@ -8,7 +8,7 @@ const About = () => {
         <Typography variant="h2">
         Vår Passion för Isländska Hästar
         </Typography>
-        <Typography className="about-text1" variant="body1">
+        <Typography className="about-text1" variant="body1" component="div">
           <span className="boldtext">Vår gård är dedikerad</span> till
           bevarandet och omvårdnaden av den unika och starka islandshästen. Med
           en rik historia i den isländska kulturen är vi stolta över att avla
