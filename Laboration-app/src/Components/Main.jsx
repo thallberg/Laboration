@@ -1,16 +1,28 @@
-import React from 'react'
-import About from '../Components-Main/About'
-import Booking from '../Components-Main/Booking'
-import Events from '../Components-Main/Events'
+import React from "react";
+import About from "../Components-Main/About";
+import Booking from "../Components-Main/Booking";
+import Events from "../Components-Main/Events";
+import { Grid } from "@mui/material";
 
 const Main = () => {
   return (
-    <div>
-        <About/>
-        <Booking/>
-        <Events/>
-    </div>
-  )
-}
+    <Grid container spacing={3}>
+      <Grid item xs={12} md={12} lg={6}>
+        <Grid container spacing={0}>
+          <Grid item sm={12} md={6} lg={12}>
+            <About />
+          </Grid>
+          <Grid item sm={12} md={6} lg={12}>
+            <Booking />
+          </Grid>
+        </Grid>
+      </Grid>
 
-export default Main
+      <Grid item xs={12} md={12} lg={6}>
+        <Events />
+      </Grid>
+    </Grid>
+  );
+};
+
+export default Main;
