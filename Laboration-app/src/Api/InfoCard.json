@@ -1,0 +1,34 @@
+[
+    {
+      "title": "Dagstur",
+      "Price": "999kr",
+      "subtitle": "Utforska naturen",
+      "description": "En härlig dagstur genom skog och mark.",
+      "image": "/images-card/dagstur.webp",
+      "link": "Läs mer"
+    },
+    {
+      "title": "Dagstur + Mat",
+      "Price": "1499kr",
+      "subtitle": "Njut av en härlig måltid",
+      "description": "Inkluderar en dagstur och en god måltid.",
+      "image": "/images-card/dagstur-mat.webp",
+      "link": "Läs mer"
+    },
+    {
+      "title": "Dagstur + Övernattning",
+      "Price": "1999kr",
+      "subtitle": "En heldagsupplevelse med övernattning",
+      "description": "Upplev naturen och avsluta med en natt i stugan.",
+      "image": "/images-card/dagstur-övernattning.webp",
+      "link": "Läs mer"
+    },
+    {
+      "title": "Skapa din egna tur",
+      "Price": "1249kr",
+      "subtitle": "Anpassa din upplevelse",
+      "description": "Välj din egen rutt och innehåll för en personlig tur.",
+      "image": "/images-card/skapa-egen-tur.webp",
+      "link": "Läs mer"
+    }
+  ]
