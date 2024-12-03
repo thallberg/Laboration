@@ -72,7 +72,6 @@ body {
 
 .section-paper {
   padding: 1rem;
-  max-width: 750px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -88,13 +87,15 @@ body {
 .booking-section,
 .events-section {
   padding: 0.5rem;
-
+  max-width: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
   flex-wrap: wrap;
 }
+
+
 
 .about-section h2,
 .booking-section h2,
@@ -116,25 +117,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
 }
 
 .event-card {
   padding: 1rem;
   text-align: center;
-  width: 280px;
-  border-radius: 8px;
+  width: 220px;
+  height: 400px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
-
   border: 1px solid black;
+  position: relative;
 }
 
 .event-image {
   width: 100%;
-  height: auto;
+  height: 120px;
   object-fit: cover;
   margin-bottom: 1rem;
+  border-radius: 6px;
 }
 
 .event-footer {
@@ -143,6 +145,17 @@ body {
 
 .events-section .MuiButton-root {
   width: 8rem;
+  position: absolute;
+  left:50%;
+  top: 87%;
+  transform: translateX(-50%);
+  
+ 
+ 
+}
+
+.event-footer {
+  
 }
 
 @media (min-width: 700px) {
