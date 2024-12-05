@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Paper, Rating, Typography, Box, Grid } from "@mui/material";
+import { Container, Paper, Rating, Typography, Box, Grid2 } from "@mui/material";
 import { fetchReviews } from "../Api/Products-rewiev";
 
 const Reviews = () => {
@@ -24,11 +24,11 @@ const Reviews = () => {
       <Typography className="reviews-title" variant="h5">Recensioner</Typography>
 
       <Box className="reviews-content">
-      <Grid container spacing={0}>
+      <Grid2 container spacing={0}>
 
 
       {Reviews.map((Review, index) => (
-        <Grid item xs={12} sm={6} lg={4} key={index}>
+        <Grid2 size={{ xs: 12, sm: 6, lg: 3}} key={index}>
         <Paper className="reviews-card" style={{margin:"1rem"}}>
           <Typography className="reviews-card-title" variant="h6">{Review.reviewerName}</Typography>
           
@@ -36,12 +36,12 @@ const Reviews = () => {
           <Rating name="read-only" value={Review.rating} readOnly />
           <Typography className="reviews-card-comment" variant="h6">{Review.comment}</Typography>
         </Paper>
-        </Grid>
+        </Grid2>
       ))}
-      </Grid>
+      </Grid2>
       </Box>
 
-      
+    
       
     </Container>
   );
