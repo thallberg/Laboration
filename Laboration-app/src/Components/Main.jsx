@@ -3,6 +3,7 @@ import About from "../Components-Main/About";
 import Booking from "../Components-Main/Booking";
 import Events from "../Components-Main/Events";
 import { Grid } from "@mui/material";
+import Reviews from "../Components-Main/Reviews";
 
 const Main = () => {
   return (
@@ -21,6 +22,7 @@ const Main = () => {
       <Grid item xs={12} md={12} lg={6}>
         <Events />
       </Grid>
+      <Reviews />
     </Grid>
   );
 };
