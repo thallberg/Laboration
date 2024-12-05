@@ -3,7 +3,7 @@ import About from "../Components-Main/About";
 import Booking from "../Components-Main/Booking";
 import Events from "../Components-Main/Events";
 import { Grid2 } from "@mui/material";
-import Reviews from "../Components-Main/Reviews";
+
 
 const Main = () => {
   return (
@@ -22,9 +22,7 @@ const Main = () => {
       <Grid2 size={{ xs: 12, md: 12, lg: 6 }}>
         <Events />
       </Grid2>
-      <Grid2 size={{ xs: 12 }}>
-        <Reviews />
-      </Grid2>
+     
     </Grid2>
   );
 };
