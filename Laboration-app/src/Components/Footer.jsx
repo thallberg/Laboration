@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Box className="footer">
       <Typography variant="body1" align="center">
-        vi skapr footer med innehåll sedan när sidan är klar
+        Footer component
       </Typography>
     </Box>
   );

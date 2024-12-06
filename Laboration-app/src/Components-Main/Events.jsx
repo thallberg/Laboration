@@ -10,7 +10,6 @@ import {
   DialogContent,
   DialogActions,
 } from "@mui/material";
-import { Link } from "react-router-dom";
 
 const Events = () => {
   const [open, setOpen] = useState(false);
@@ -40,7 +39,11 @@ const Events = () => {
 
         <Box className="events-container">
           <Box className="event-card">
-            <img src="/Easter1.webp" alt="Påskridning" className="event-image" />
+            <img
+              src="/Easter1.webp"
+              alt="Påskridning"
+              className="event-image"
+            />
             <Typography variant="h5" className="event-title">
               Påskridning
             </Typography>
@@ -52,8 +55,6 @@ const Events = () => {
             <Box className="event-footer">
               <Button
                 variant="outlined"
-                component={Link}
-                to=""
                 className="read-more-btn"
                 onClick={() =>
                   handleClickOpen({
@@ -66,7 +67,7 @@ const Events = () => {
                     naturen på ett annorlunda och minnesvärt sätt. 
                     Vi rekommenderar att boka i god tid då platserna snabbt blir fullbokade under högtiden!`,
                     image: "/Easter1.webp",
-                })
+                  })
                 }
               >
                 Läs mer
@@ -91,13 +92,10 @@ const Events = () => {
             <Box className="event-footer">
               <Button
                 variant="outlined"
-                component={Link}
-                to=""
                 className="read-more-btn"
                 onClick={() =>
                   handleClickOpen({
-                    description: 
-                    `
+                    description: `
                         Upplev adventstiden på ett magiskt sätt med en ridtur genom ett gnistrande vinterlandskap. 
                         Våra isländska hästar tar dig med på en fridfull resa genom snötäckta skogar och öppna ängar, 
                         där lugnet i naturen skapar en perfekt inramning för julens förväntan. Under turen gör vi ett stopp 
@@ -107,7 +105,7 @@ const Events = () => {
                         alldeles extra!
                       `,
                     image: "/Advent1.webp",
-                 } )
+                  })
                 }
               >
                 Läs mer
