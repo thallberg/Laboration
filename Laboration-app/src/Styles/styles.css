@@ -21,7 +21,7 @@ body {
 }
 
 .red-span {
-  color: red;
+  color: rgb(212, 15, 15);
 }
 
 .blue-span {
@@ -148,6 +148,11 @@ body {
   position: relative;
 }
 
+.event-title {
+  font-size: 1.6rem!important;
+  margin-bottom: 0.4rem!important;
+}
+
 .event-image {
   width: 100%;
   height: 120px;
@@ -185,6 +190,16 @@ body {
   margin-left: -0.7rem !important;
 }
 
+.card-title2 {
+  font-size: 2rem!important;
+}
+
+.card-title3 {
+  font-size: 1.3rem!important;
+}
+
+
+
 .Info-card-title {
   position: absolute;
   top: 0;
@@ -221,6 +236,7 @@ body {
   text-align: center;
   font-size: 3.5rem !important;
   position: relative;
+  margin-bottom: 1rem!important;
 }
 
 .heart-emoji {
@@ -229,6 +245,13 @@ body {
   right: -25px;
   transform: rotate(30deg);
   z-index: -2;
+}
+
+.heart-emoji img {
+  width: 100%;
+  height: 100%;
+  max-width: 50px;
+  max-height: 50px ;
 }
 
 .reviews-section {
@@ -243,6 +266,11 @@ body {
   top: 0;
   right: 0;
   z-index: -10;
+}
+
+.sun-icon {
+  width: 100%;
+  height: 100%;
 }
 
 .reviews-title {

@@ -28,10 +28,10 @@ const InfoCards = () => {
               alt="Bild på kortets innehåll"
             />
             <CardContent>
-              <Typography className="Info-card-title" variant="h5">
+              <Typography className="Info-card-title card-title2" variant="h2">
                 {card.title}
               </Typography>
-              <Typography className="Info-card-text info-card1" variant="subtitle1">
+              <Typography className="Info-card-text card-title3" variant="h3">
                 {card.subtitle}
               </Typography>
               <Typography className="Info-card-text" variant="body2">

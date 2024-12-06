@@ -44,7 +44,7 @@ const Events = () => {
               alt="Påskridning"
               className="event-image"
             />
-            <Typography variant="h5" className="event-title">
+            <Typography variant="h3" className="event-title">
               Påskridning
             </Typography>
             <Typography variant="body2" className="event-description">
@@ -81,7 +81,7 @@ const Events = () => {
               alt="Advent Ridning"
               className="event-image"
             />
-            <Typography variant="h5" className="event-title">
+            <Typography variant="h3" className="event-title">
               Advent Ridning
             </Typography>
             <Typography variant="body2" className="event-description">

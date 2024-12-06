@@ -35,7 +35,7 @@ const Reviews = () => {
         />
       </Box>
 
-      <Typography className="reviews-title" variant="h5">
+      <Typography className="reviews-title" variant="h4">
         Recensioner
       </Typography>
 
@@ -44,7 +44,7 @@ const Reviews = () => {
           {Reviews.map((Review, index) => (
             <Grid2 size={{ xs: 12, sm: 6, md: 12, lg: 12 }} key={index}>
               <Paper className="reviews-card" style={{ margin: "1rem" }}>
-                <Typography className="reviews-card-title" variant="h6">
+                <Typography className="reviews-card-title" variant="h5">
                   {Review.reviewerName}
                 </Typography>
 
