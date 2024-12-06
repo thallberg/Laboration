@@ -1,24 +1,14 @@
-import React from 'react'
-import Header from '../Components/Header'
-import Main from '../Components/Main'
-
+import React from "react";
+import Header from "../Components/Header";
+import Main from "../Components/Main";
 
 const HomePage = () => {
-
-
-  
   return (
     <div>
-    
-      <Header/>
-      <Main/>
-      
-     
-      
-  
-   
+      <Header />
+      <Main />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

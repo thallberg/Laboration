@@ -1,38 +1,42 @@
 [
-    {
-      "title": "Dagstur",
-      "Price": "999kr",
-      "subtitle": "Utforska naturen",
-      "description": "En härlig dagstur genom skog och mark.",
-      "image": "/images-card/dagstur.webp",
-      "link": "Läs mer",
-      "booking": "Boka"
-    },
-    {
-      "title": "Dagstur + Mat",
-      "Price": "1499kr",
-      "subtitle": "Njut av en härlig måltid",
-      "description": "Inkluderar en dagstur och en god måltid.",
-      "image": "/images-card/dagstur-mat.webp",
-      "link": "Läs mer",
-      "booking": "Boka"
-    },
-    {
-      "title": "Dagstur + Övernattning",
-      "Price": "1999kr",
-      "subtitle": "En heldagsupplevelse med övernattning",
-      "description": "Upplev naturen och avsluta med en natt i stugan.",
-      "image": "/images-card/dagstur-övernattning.webp",
-     "link": "Läs mer",
-      "booking": "Boka"
-    },
-    {
-      "title": "Skapa din egna tur",
-      "Price": "1249kr",
-      "subtitle": "Anpassa din upplevelse",
-      "description": "Välj din egen rutt och innehåll för en personlig tur.",
-      "image": "/images-card/skapa-egen-tur.webp",
-      "link": "Läs mer",
-      "booking": "Boka"
-    }
-  ]
+  {
+    "id": "1",
+    "title": "Dagstur",
+    "price": "999",
+    "subtitle": "Utforska naturen",
+    "description": "En härlig dagstur genom skog och mark.",
+    "image": "/images-card/dagstur.webp",
+    "link": "Läs mer",
+    "booking": "Boka"
+  },
+  {
+    "id": "2",
+    "title": "Dagstur + Mat",
+    "price": "1499",
+    "subtitle": "Njut av en härlig måltid",
+    "description": "Inkluderar en dagstur och en god måltid.",
+    "image": "/images-card/dagstur-mat.webp",
+    "link": "Läs mer",
+    "booking": "Boka"
+  },
+  {
+    "id": "3",
+    "title": "Dagstur + Övernattning",
+    "price": "1999",
+    "subtitle": "En heldagsupplevelse med övernattning",
+    "description": "Upplev naturen och avsluta med en natt i stugan.",
+    "image": "/images-card/dagstur-övernattning.webp",
+    "link": "Läs mer",
+    "booking": "Boka"
+  },
+  {
+    "id": "4",
+    "title": "Skapa din egna tur",
+    "price": "1249",
+    "subtitle": "Anpassa din upplevelse",
+    "description": "Välj din egen rutt och innehåll för en personlig tur.",
+    "image": "/images-card/skapa-egen-tur.webp",
+    "link": "Läs mer",
+    "booking": "Boka"
+  }
+]

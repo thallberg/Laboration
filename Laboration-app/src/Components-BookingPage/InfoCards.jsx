@@ -9,6 +9,9 @@ import {
 } from "@mui/material";
 import React from "react";
 import InfoCard from "../api/InfoCard.json";
+import { Link } from "react-router-dom";
+
+
 
 const InfoCards = () => {
   return (
@@ -35,14 +38,25 @@ const InfoCards = () => {
                 {card.description}
               </Typography>
               <Typography className="Info-card-text boldtext" variant="body2">
-                Från: <span className="red-span">{card.Price}</span> /person
+                Från: <span className="red-span">{card.price}</span> /person
               </Typography>
               <Box className="card-button-wrapper">
               <Button className="Info-card-link" variant="contained">
                 {card.link}
               </Button>
-              <Button className="Info-card-link info-button-link" variant="contained">
+              <Button 
+              component={Link}
+              to={"/Booking-form/" + card.id}
+              state={{
+                id: card.id,
+                activity: card.title,
+                price: card.price,
+                description: card.description,
+                image: card.image
+              }}
+              className="Info-card-link info-button-link" variant="contained">
                 {card.booking}
+                
               </Button>
               </Box>
             </CardContent>
