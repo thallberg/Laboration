@@ -1,12 +1,36 @@
-import { Box, Typography } from "@mui/material";
 import React from "react";
+import { Box, Typography, Link, IconButton } from "@mui/material";
+import { Facebook, Instagram, Twitter, Email } from "@mui/icons-material";
+import "../Styles/Styles.css";
 
 const Footer = () => {
   return (
     <Box className="footer">
-      <Typography variant="body1" align="center">
-        Footer component
-      </Typography>
+      <Box className="footer-contact">
+        <Typography variant="h6">Kontakta oss</Typography>
+        <Typography variant="body2">Ridgården AB</Typography>
+        <Typography variant="body2">Gårdvägen 123, 456 78 Stallby</Typography>
+        <Typography variant="body2">Telefon: 070-123 45 67</Typography>
+        <Typography variant="body2">E-post: info@ridgarden.se</Typography>
+      </Box>
+
+      <Box className="divider"></Box>
+
+      <Box className="footer-social">
+        <Typography variant="h6">Följ oss</Typography>
+        <IconButton className="social-icon" aria-label="Facebook">
+          <Facebook />
+        </IconButton>
+        <IconButton className="social-icon" aria-label="Instagram">
+          <Instagram />
+        </IconButton>
+        <IconButton className="social-icon" aria-label="Twitter">
+          <Twitter />
+        </IconButton>
+        <IconButton className="social-icon" aria-label="Email">
+          <Email />
+        </IconButton>
+      </Box>
     </Box>
   );
 };
