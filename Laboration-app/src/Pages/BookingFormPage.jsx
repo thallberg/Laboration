@@ -8,6 +8,7 @@ import FormDagsTur from "../Components-FormPage/FormDagsTur";
 import FormDagsTurMat from "../Components-FormPage/FormDagsTurMat";
 import FormDagsTurOvernattning from "../Components-FormPage/FormDagsTurOvernattning";
 
+
 const BookingFormPage = () => {
   const params = useParams();
   const id = params.id;
@@ -44,6 +45,8 @@ const BookingFormPage = () => {
   }
 
   return (
+
+    
     <Container className="booking-container">
       <Button
         variant="text"
@@ -56,6 +59,9 @@ const BookingFormPage = () => {
       </Button>
       <Box className="booking-form-container">{formComponent}</Box>
     </Container>
+ 
+  
+    
   );
 };
 

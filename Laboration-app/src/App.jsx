@@ -6,6 +6,7 @@ import BookingPage from "./Pages/BookingPage";
 import Navbar from "./Components/navbar";
 import Footer from "./Components/Footer";
 import BookingFormPage from "./Pages/BookingFormPage";
+import { Box } from "@mui/material";
 
 
 
@@ -14,13 +15,17 @@ import BookingFormPage from "./Pages/BookingFormPage";
 function App() {
   return (
     <BrowserRouter> 
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/booking" element={<BookingPage />} />
-        <Route path="/Booking-form/:id" element={<BookingFormPage />} />
-      </Routes>
-      <Footer />
+      <Box id="root">
+        <Navbar />
+        <Box className="content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/booking" element={<BookingPage />} />
+            <Route path="/Booking-form/:id" element={<BookingFormPage />} />
+          </Routes>
+        </Box>
+        <Footer />
+      </Box>
     </BrowserRouter> 
   );
 }

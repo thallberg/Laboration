@@ -118,8 +118,10 @@ const FormDagsTur = ({ activity, price }) => {
             type="date"
             value={formData.date}
             onChange={handleChange}
-            InputLabelProps={{
-              shrink: true,
+            slotProps={{
+              inputLabel: {
+                shrink: true,
+              },
             }}
           />
         </Box>

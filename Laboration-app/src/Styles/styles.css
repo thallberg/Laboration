@@ -4,9 +4,18 @@
   box-sizing: border-box;
 }
 
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+html,
 body {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
   background: linear-gradient(
     rgba(234, 234, 234, 1) 0%,
     rgb(100, 200, 167) 25%,
@@ -149,8 +158,8 @@ body {
 }
 
 .event-title {
-  font-size: 1.6rem!important;
-  margin-bottom: 0.4rem!important;
+  font-size: 1.6rem !important;
+  margin-bottom: 0.4rem !important;
 }
 
 .event-image {
@@ -191,14 +200,12 @@ body {
 }
 
 .card-title2 {
-  font-size: 2rem!important;
+  font-size: 2rem !important;
 }
 
 .card-title3 {
-  font-size: 1.3rem!important;
+  font-size: 1.3rem !important;
 }
-
-
 
 .Info-card-title {
   position: absolute;
@@ -212,9 +219,10 @@ body {
 
 .info-card-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   background-position: center;
-  max-height: 350px;
+  object-fit: cover;
+  background-position: center;
 }
 
 .info-button-link {
@@ -236,7 +244,7 @@ body {
   text-align: center;
   font-size: 3.5rem !important;
   position: relative;
-  margin-bottom: 1rem!important;
+  margin-bottom: 1rem !important;
 }
 
 .heart-emoji {
@@ -251,7 +259,7 @@ body {
   width: 100%;
   height: 100%;
   max-width: 50px;
-  max-height: 50px ;
+  max-height: 50px;
 }
 
 .reviews-section {
@@ -318,6 +326,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 3rem;
+
 }
 
 .booking-form-card-container {
@@ -398,10 +408,7 @@ body {
     animation: blurIn 1.5s ease-out forwards;
     margin: 0;
     margin-bottom: 2rem;
-
   }
-
-
 
   .header-title {
     position: absolute;
@@ -419,11 +426,9 @@ body {
   @keyframes blurIn {
     0% {
       filter: blur(20px);
-     
     }
     100% {
       filter: blur(0);
-     
     }
   }
 }
