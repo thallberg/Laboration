@@ -13,11 +13,9 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
-
-
+import Backdrop from "@mui/material/Backdrop";
 
 const Navbar = () => {
-
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -25,9 +23,9 @@ const Navbar = () => {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 200 }} role="presentation">
+    <Box sx={{ width: 200 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-      <ListItem button>
+        <ListItem button>
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
             <ListItemText primary="Hem" />
           </Link>
@@ -49,22 +47,18 @@ const Navbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar className="navbar" position="sticky" >
-      <Toolbar className="toolbar">
+      <AppBar className="navbar" position="sticky">
+        <Toolbar className="toolbar">
           <Box className="links-content">
             <Link className="navbar-links" to="/" style={{ color: "inherit" }}>
-              <Typography variant="h6" >
-                Hem
-              </Typography>
+              <Typography variant="h6">Hem</Typography>
             </Link>
             <Link
               to="/booking"
               className="navbar-links"
               style={{ color: "inherit" }}
             >
-              <Typography variant="h6" >
-                Boka
-              </Typography>
+              <Typography variant="h6">Boka</Typography>
             </Link>
           </Box>
           <IconButton
@@ -82,6 +76,16 @@ const Navbar = () => {
       <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
+
+      <Backdrop
+        sx={(theme) => ({
+          backdropFilter: "blur(5px)",
+          color: "#fff",
+          zIndex: theme.zIndex.drawer - 1,
+        })}
+        open={open}
+        onClick={toggleDrawer(false)}
+      ></Backdrop>
     </Box>
   );
 };
