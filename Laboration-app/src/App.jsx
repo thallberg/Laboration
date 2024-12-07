@@ -10,18 +10,18 @@ import BookingFormPage from "./Pages/BookingFormPage";
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>
-      <Navbar />
-      <main>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/booking" element={<BookingPage />} />
-          <Route path="/Booking-form/:id" element={<BookingFormPage />} />
-        </Routes>
-      </main>
-      <Footer />
-    </BrowserRouter>
-  </div>
+      <BrowserRouter>
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/booking" element={<BookingPage />} />
+            <Route path="/Booking-form/:id" element={<BookingFormPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 

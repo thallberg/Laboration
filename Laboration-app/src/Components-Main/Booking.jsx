@@ -1,15 +1,14 @@
 import React from "react";
-import { Container, Typography, Button, Paper,Box } from "@mui/material";
+import { Container, Typography, Button, Paper, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Booking = () => {
   return (
     <Container className="booking-section">
       <Paper className="section-paper">
-        <Typography variant="h2">
-          Boka ditt besök</Typography>
+        <Typography variant="h2">Boka ditt besök</Typography>
 
-        <Typography variant="body1" component="div" >
+        <Typography variant="body1" component="div">
           Upplev skönheten hos de isländska hästarna! Klicka på knappen nedan
           för att boka ditt besök. Följ med oss på en oförglömlig upplevelse med
           de isländska hästarna. Oavsett om du är intresserad av ridning eller
@@ -23,7 +22,7 @@ const Booking = () => {
           nedan för att gå vidare till vår bokningssida.
         </Typography>
 
-        <Button 
+        <Button
           variant="contained"
           color="primary"
           size="large"

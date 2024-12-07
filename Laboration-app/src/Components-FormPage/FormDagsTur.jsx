@@ -161,7 +161,11 @@ const FormDagsTur = ({ activity, price }) => {
           </Typography>
         </Box>
         <Box className="form-footer">
-          <Button className="form-button-submit" variant="contained" type="submit" >
+          <Button
+            className="form-button-submit"
+            variant="contained"
+            type="submit"
+          >
             Boka nu
           </Button>
         </Box>

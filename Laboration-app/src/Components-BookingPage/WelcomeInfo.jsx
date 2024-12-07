@@ -7,7 +7,11 @@ const WelcomeInfo = () => {
       <Typography className="welcome-content-title" variant="h1">
         Boka din upplevelse
         <span className="heart-emoji">
-          <img src="/heart-eyes-emoji-icon.png" alt="Emoji med hjärtögon" />
+          <img
+            src="/heart-eyes-emoji-icon.png"
+            alt="Emoji med hjärtögon"
+            loading="lazy"
+          />
         </span>
       </Typography>
       <Typography variant="body1">

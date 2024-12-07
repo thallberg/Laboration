@@ -1,13 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Container, Box, Button, Typography } from "@mui/material";
+import { Container, Box, Button } from "@mui/material";
 import UndoIcon from "@mui/icons-material/Undo";
 import infoCard from "../api/InfoCard.json";
 import { Link } from "react-router-dom";
 import FormDagsTur from "../Components-FormPage/FormDagsTur";
 import FormDagsTurMat from "../Components-FormPage/FormDagsTurMat";
 import FormDagsTurOvernattning from "../Components-FormPage/FormDagsTurOvernattning";
-
 
 const BookingFormPage = () => {
   const params = useParams();
@@ -45,8 +44,6 @@ const BookingFormPage = () => {
   }
 
   return (
-
-    
     <Container className="booking-container">
       <Button
         variant="text"
@@ -59,9 +56,6 @@ const BookingFormPage = () => {
       </Button>
       <Box className="booking-form-container">{formComponent}</Box>
     </Container>
- 
-  
-    
   );
 };
 

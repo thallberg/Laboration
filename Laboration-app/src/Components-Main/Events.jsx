@@ -43,6 +43,7 @@ const Events = () => {
               src="/Easter1.webp"
               alt="Påskridning"
               className="event-image"
+              loading="lazy"
             />
             <Typography variant="h3" className="event-title">
               Påskridning
@@ -80,6 +81,7 @@ const Events = () => {
               src="/Advent1.webp"
               alt="Advent Ridning"
               className="event-image"
+              loading="lazy"
             />
             <Typography variant="h3" className="event-title">
               Advent Ridning
@@ -120,6 +122,7 @@ const Events = () => {
         <DialogContent>
           <img
             src={eventInfo.image}
+            loading="lazy"
             style={{ width: "100%", marginBottom: "20px" }}
           />
           <Typography>{eventInfo.description}</Typography>

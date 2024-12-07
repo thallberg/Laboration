@@ -32,6 +32,7 @@ const Reviews = () => {
           className="sun-icon"
           src="/sun-color-icon.png"
           alt="ikon på en sol"
+          loading="lazy"
         />
       </Box>
 

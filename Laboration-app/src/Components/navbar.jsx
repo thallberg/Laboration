@@ -80,7 +80,6 @@ const Navbar = () => {
       <Backdrop
         sx={(theme) => ({
           backdropFilter: "blur(5px)",
-          color: "#fff",
           zIndex: theme.zIndex.drawer - 1,
         })}
         open={open}

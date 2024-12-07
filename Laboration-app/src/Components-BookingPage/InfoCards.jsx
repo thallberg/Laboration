@@ -5,26 +5,28 @@ import {
   CardMedia,
   Typography,
   Grid2,
-  Box
+  Box,
 } from "@mui/material";
 import React from "react";
 import InfoCard from "../api/InfoCard.json";
 import { Link } from "react-router-dom";
 
-
-
 const InfoCards = () => {
   return (
-    <Grid2 container rowSpacing={4} columnSpacing={{ xs: 1, sm: 0, md: 0 }} className="Info-card-grid">
+    <Grid2
+      container
+      rowSpacing={4}
+      columnSpacing={{ xs: 1, sm: 0, md: 0 }}
+      className="Info-card-grid"
+    >
       {InfoCard.map((card, index) => (
-        <Grid2 size={{ xs: 12, sm:6, md: 12}}
-          key={index}
-        >
+        <Grid2 size={{ xs: 12, sm: 6, md: 12 }} key={index}>
           <Card className="Info-card-content">
             <CardMedia
               className="info-card-image"
               component="img"
               image={card.image}
+              loading="lazy"
               alt="Bild på kortets innehåll"
             />
             <CardContent>
@@ -41,23 +43,24 @@ const InfoCards = () => {
                 Från: <span className="red-span">{card.price}</span> /person
               </Typography>
               <Box className="card-button-wrapper">
-              <Button className="Info-card-link" variant="contained">
-                {card.link}
-              </Button>
-              <Button 
-              component={Link}
-              to={"/Booking-form/" + card.id}
-              state={{
-                id: card.id,
-                activity: card.title,
-                price: card.price,
-                description: card.description,
-                image: card.image
-              }}
-              className="Info-card-link info-button-link" variant="contained">
-                {card.booking}
-                
-              </Button>
+                <Button className="Info-card-link" variant="contained">
+                  {card.link}
+                </Button>
+                <Button
+                  component={Link}
+                  to={"/Booking-form/" + card.id}
+                  state={{
+                    id: card.id,
+                    activity: card.title,
+                    price: card.price,
+                    description: card.description,
+                    image: card.image,
+                  }}
+                  className="Info-card-link info-button-link"
+                  variant="contained"
+                >
+                  {card.booking}
+                </Button>
               </Box>
             </CardContent>
           </Card>
