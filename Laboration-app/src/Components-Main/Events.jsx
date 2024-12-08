@@ -37,6 +37,31 @@ const Events = () => {
           våra populära turer under påsken, midsommar, advent och fler!
         </Typography>
 
+        <Box className="event-section-image">
+        <img
+          src="/event1.webp"
+          alt="Emoji med hjärtögon"
+          loading="lazy"
+        />
+         <img
+          src="/event2.webp"
+          alt="Emoji med hjärtögon"
+          loading="lazy"
+        />
+         <img
+          src="/event3.webp"
+          alt="Emoji med hjärtögon"
+          loading="lazy"
+        />
+         <img
+          src="/event4.webp"
+          alt="Emoji med hjärtögon"
+          loading="lazy"
+        />
+        </Box>
+
+
+
         <Box className="events-container">
           <Box className="event-card">
             <img

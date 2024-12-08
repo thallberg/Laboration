@@ -14,7 +14,7 @@ const Footer = () => {
         <Typography variant="body2">E-post: info@ridgarden.se</Typography>
       </Box>
 
-      <Box className="divider"></Box>
+      <Box className="divider dividerleft"></Box>
 
       <Box className="footer-social">
         <Typography variant="h6">Följ oss</Typography>

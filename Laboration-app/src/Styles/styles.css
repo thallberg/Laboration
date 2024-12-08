@@ -71,7 +71,7 @@ main {
   position: relative;
   width: 95%;
   margin: auto;
-  height: 100%;
+  height: 50vh;
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: flex;
@@ -108,12 +108,68 @@ main {
   flex-direction: column;
 }
 
+.horse-icon-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.horse-icon img,
+.horse-icon1 img {
+  width: 50px;
+  height: 50px;
+}
+
+.horse-icon1 img {
+  transform: scaleX(-1); 
+}
+
 .divider {
   margin: 12px auto;
   border-top: 2px solid #217dd9;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
+
+.about-section-image img {
+  width: 45%;
+  height: auto;
+  margin: auto!important;
+ 
+}
+
+.about-section-image {
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+ flex-wrap: wrap;
+ margin-bottom: 0.8rem;
+ margin-top: 0.5rem;
+}
+
+.event-section-image {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: -1rem;
+  margin-top: 1rem;
+  gap: 5px;
+}
+
+.event-section-image img {
+  width: 48%;
+  max-width: 210px;
+ 
+}
+
+
+
+
+
 
 .about-section,
 .booking-section,
@@ -125,6 +181,7 @@ main {
   align-items: center;
   text-align: left;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .about-section h2,
@@ -140,6 +197,19 @@ main {
   margin-top: 1rem;
   align-self: center;
   width: 8rem;
+}
+
+.Booking-section-image img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+.Booking-section-image {
+ display: flex;
+ justify-content: center;
+ margin-bottom: 0.8rem;
+ margin-top: 0.5rem;
 }
 
 .events-container {
@@ -432,7 +502,7 @@ main {
     font-size: 1.7rem !important;
   }
 
-  .divider {
+  .dividerleft {
     border-left: 2px solid #217dd9;
     height: 140px;
     width: 2px;

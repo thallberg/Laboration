@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Typography, Button, Paper, Box } from "@mui/material";
 import { Link } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Booking = () => {
   return (
@@ -16,6 +18,14 @@ const Booking = () => {
           bokningsalternativ som passar dina behov.
           <Box className="divider"></Box>
         </Typography>
+
+        <Box className="Booking-section-image">
+          <img
+            src="/horse-booking-main.webp"
+            alt="Emoji med hjärtögon"
+            loading="lazy"
+          />
+        </Box>
 
         <Typography variant="body2">
           För att göra en bokning eller få mer information, klicka på knappen
