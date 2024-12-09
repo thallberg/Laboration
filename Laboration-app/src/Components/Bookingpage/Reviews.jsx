@@ -7,7 +7,7 @@ import {
   Box,
   Grid2,
 } from "@mui/material";
-import { fetchReviews } from "../Api/Products-rewiev";
+import { fetchReviews } from "../../Api/Reviews";
 
 const Reviews = () => {
   const [Reviews, setReviews] = useState([]);

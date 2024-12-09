@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Link, IconButton } from "@mui/material";
+import { Box, Typography, IconButton } from "@mui/material";
 import { Facebook, Instagram, Twitter, Email } from "@mui/icons-material";
 import "../Styles/Styles.css";
 

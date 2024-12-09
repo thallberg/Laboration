@@ -1,8 +1,6 @@
 import React from "react";
 import { Container, Typography, Button, Paper, Box } from "@mui/material";
 import { Link } from "react-router-dom";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Booking = () => {
   return (

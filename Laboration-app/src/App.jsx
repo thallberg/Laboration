@@ -1,11 +1,11 @@
 import React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./Styles/Styles.css";
-import HomePage from "./Pages/HomePage";
-import BookingPage from "./Pages/BookingPage";
-import Navbar from "./Components/navbar";
+import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import BookingFormPage from "./Pages/BookingFormPage";
+import Home from "./Pages/Home";
+import Booking from "./Pages/Booking";
+import Bookingform from "./Pages/Bookingform";
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
         <Navbar />
         <main>
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/booking" element={<BookingPage />} />
-            <Route path="/Booking-form/:id" element={<BookingFormPage />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/booking-form/:id" element={<Bookingform />} />
           </Routes>
         </main>
         <Footer />

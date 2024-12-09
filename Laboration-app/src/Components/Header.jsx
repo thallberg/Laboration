@@ -12,7 +12,7 @@ const Header = () => {
       />
 
       <Typography className="header-title" variant="h1">
-        Välkommen till Swings Isländshästar
+        Välkommen Till Ridgården
       </Typography>
     </Box>
   );

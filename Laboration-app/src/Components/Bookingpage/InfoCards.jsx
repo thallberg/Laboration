@@ -8,7 +8,7 @@ import {
   Box,
 } from "@mui/material";
 import React from "react";
-import InfoCard from "../api/InfoCard.json";
+import Infocard from "../../api/Infocard.json";
 import { Link } from "react-router-dom";
 
 const InfoCards = () => {
@@ -19,7 +19,7 @@ const InfoCards = () => {
       columnSpacing={{ xs: 1, sm: 0, md: 0 }}
       className="Info-card-grid"
     >
-      {InfoCard.map((card, index) => (
+      {Infocard.map((card, index) => (
         <Grid2 size={{ xs: 12, sm: 6, md: 12 }} key={index}>
           <Card className="Info-card-content">
             <CardMedia

@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const FormDagsturMat = ({ activity, price }) => {
+const Daytourhouse = ({ activity, price }) => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const FormDagsturMat = ({ activity, price }) => {
     time: "",
     peopleCount: 1,
     totalPrice: price,
-    meal: "",
+    house: "",
   });
 
   const [openConfirmModal, setOpenConfirmModal] = useState(false);
@@ -71,7 +71,6 @@ const FormDagsturMat = ({ activity, price }) => {
       <Typography className="form-container-title" variant="h4">
         {activity}
       </Typography>
-
       <form onSubmit={handleSubmit}>
         <Box mb={2}>
           <TextField
@@ -130,6 +129,7 @@ const FormDagsturMat = ({ activity, price }) => {
             <FormControl required fullWidth>
               <InputLabel>Välj tid</InputLabel>
               <Select
+                required
                 label="Välj tid"
                 name="time"
                 value={formData.time}
@@ -157,20 +157,19 @@ const FormDagsturMat = ({ activity, price }) => {
 
         <Box mb={2}>
           <FormControl required fullWidth>
-            <InputLabel>Välj maträtt</InputLabel>
+            <InputLabel>Välj boende</InputLabel>
             <Select
-              label="Välj maträtt"
-              name="meal"
-              value={formData.meal}
+              required
+              label="Välj boende"
+              name="house"
+              value={formData.house}
               onChange={handleChange}
             >
-              <MenuItem value="Fisk">Fisksoppa</MenuItem>
-              <MenuItem value="Kyckling">Kycklinggryta</MenuItem>
-              <MenuItem value="Vegetarisk">Vegetarisk pasta</MenuItem>
+              <MenuItem value="Stuga">Stuga</MenuItem>
+              <MenuItem value="Hus">Hus</MenuItem>
             </Select>
           </FormControl>
         </Box>
-
         <Box mt={2} className="booking-form-totalprice">
           <Typography variant="h6">
             Totalpris: <span className="red-span">{formData.totalPrice}</span>{" "}
@@ -195,7 +194,7 @@ const FormDagsturMat = ({ activity, price }) => {
         <DialogTitle>Bekräfta bokning</DialogTitle>
         <DialogContent>
           <Typography variant="body1">
-            Är du säker på att du vill boka denna aktivitet och måltid?
+            Är du säker på att du vill boka denna aktivitet och boende?
           </Typography>
         </DialogContent>
         <DialogActions>
@@ -219,8 +218,8 @@ const FormDagsturMat = ({ activity, price }) => {
             Datum: {formData.date} <br />
             Tid: {formData.time} <br />
             Antal personer: {formData.peopleCount} <br />
+            Boende: {formData.house} <br />
             Totalpris: {formData.totalPrice} SEK <br />
-            Maträtt: {formData.meal} <br />
             En bekräftelse på bokningen har skickats till {formData.email}.
           </Typography>
         </DialogContent>
@@ -234,4 +233,4 @@ const FormDagsturMat = ({ activity, price }) => {
   );
 };
 
-export default FormDagsturMat;
+export default Daytourhouse;

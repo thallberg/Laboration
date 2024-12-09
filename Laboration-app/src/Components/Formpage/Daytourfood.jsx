@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const FormDagsTurOvernattning = ({ activity, price }) => {
+const Daytourfood = ({ activity, price }) => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const FormDagsTurOvernattning = ({ activity, price }) => {
     time: "",
     peopleCount: 1,
     totalPrice: price,
-    house: "",
+    meal: "",
   });
 
   const [openConfirmModal, setOpenConfirmModal] = useState(false);
@@ -71,6 +71,7 @@ const FormDagsTurOvernattning = ({ activity, price }) => {
       <Typography className="form-container-title" variant="h4">
         {activity}
       </Typography>
+
       <form onSubmit={handleSubmit}>
         <Box mb={2}>
           <TextField
@@ -129,7 +130,6 @@ const FormDagsTurOvernattning = ({ activity, price }) => {
             <FormControl required fullWidth>
               <InputLabel>Välj tid</InputLabel>
               <Select
-                required
                 label="Välj tid"
                 name="time"
                 value={formData.time}
@@ -157,19 +157,20 @@ const FormDagsTurOvernattning = ({ activity, price }) => {
 
         <Box mb={2}>
           <FormControl required fullWidth>
-            <InputLabel>Välj boende</InputLabel>
+            <InputLabel>Välj maträtt</InputLabel>
             <Select
-              required
-              label="Välj boende"
-              name="house"
-              value={formData.house}
+              label="Välj maträtt"
+              name="meal"
+              value={formData.meal}
               onChange={handleChange}
             >
-              <MenuItem value="Stuga">Stuga</MenuItem>
-              <MenuItem value="Hus">Hus</MenuItem>
+              <MenuItem value="Fisk">Fisksoppa</MenuItem>
+              <MenuItem value="Kyckling">Kycklinggryta</MenuItem>
+              <MenuItem value="Vegetarisk">Vegetarisk pasta</MenuItem>
             </Select>
           </FormControl>
         </Box>
+
         <Box mt={2} className="booking-form-totalprice">
           <Typography variant="h6">
             Totalpris: <span className="red-span">{formData.totalPrice}</span>{" "}
@@ -194,7 +195,7 @@ const FormDagsTurOvernattning = ({ activity, price }) => {
         <DialogTitle>Bekräfta bokning</DialogTitle>
         <DialogContent>
           <Typography variant="body1">
-            Är du säker på att du vill boka denna aktivitet och boende?
+            Är du säker på att du vill boka denna aktivitet och måltid?
           </Typography>
         </DialogContent>
         <DialogActions>
@@ -218,8 +219,8 @@ const FormDagsTurOvernattning = ({ activity, price }) => {
             Datum: {formData.date} <br />
             Tid: {formData.time} <br />
             Antal personer: {formData.peopleCount} <br />
-            Boende: {formData.house} <br />
             Totalpris: {formData.totalPrice} SEK <br />
+            Maträtt: {formData.meal} <br />
             En bekräftelse på bokningen har skickats till {formData.email}.
           </Typography>
         </DialogContent>
@@ -233,4 +234,4 @@ const FormDagsTurOvernattning = ({ activity, price }) => {
   );
 };
 
-export default FormDagsTurOvernattning;
+export default Daytourfood;

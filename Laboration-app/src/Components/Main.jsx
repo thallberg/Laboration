@@ -1,8 +1,8 @@
 import React from "react";
-import About from "../Components-Main/About";
-import Booking from "../Components-Main/Booking";
-import Events from "../Components-Main/Events";
 import { Grid2 } from "@mui/material";
+import About from "./Mainpage/About";
+import Booking from "./Mainpage/Booking";
+import Events from "./Mainpage/Events";
 
 const Main = () => {
   return (

@@ -4,11 +4,14 @@ import { Container, Box, Button } from "@mui/material";
 import UndoIcon from "@mui/icons-material/Undo";
 import infoCard from "../api/InfoCard.json";
 import { Link } from "react-router-dom";
-import FormDagsTur from "../Components-FormPage/FormDagsTur";
-import FormDagsTurMat from "../Components-FormPage/FormDagsTurMat";
-import FormDagsTurOvernattning from "../Components-FormPage/FormDagsTurOvernattning";
+import Daytour from "../Components/Formpage/Daytour";
+import Daytourfood from "../Components/Formpage/Daytourfood";
+import Daytourhouse from "../Components/Formpage/Daytourhouse";
 
-const BookingFormPage = () => {
+
+
+
+const Bookingform = () => {
   const params = useParams();
   const id = params.id;
 
@@ -22,17 +25,17 @@ const BookingFormPage = () => {
     switch (id) {
       case "1":
         formComponent = (
-          <FormDagsTur activity={selectedCard.title} price={price} />
+          <Daytour activity={selectedCard.title} price={price} />
         );
         break;
       case "2":
         formComponent = (
-          <FormDagsTurMat activity={selectedCard.title} price={price} />
+          <Daytourfood activity={selectedCard.title} price={price} />
         );
         break;
       case "3":
         formComponent = (
-          <FormDagsTurOvernattning
+          <Daytourhouse
             activity={selectedCard.title}
             price={price}
           />
@@ -59,4 +62,4 @@ const BookingFormPage = () => {
   );
 };
 
-export default BookingFormPage;
+export default Bookingform;
