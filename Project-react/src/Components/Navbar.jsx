@@ -25,14 +25,14 @@ const Navbar = () => {
   const DrawerList = (
     <Box sx={{ width: 200 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        <ListItem button ="true">
+        <ListItem button="true">
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
             <ListItemText primary="Hem" />
           </Link>
         </ListItem>
         <Divider />
 
-        <ListItem button ="true">
+        <ListItem button="true">
           <Link
             to="/booking"
             style={{ textDecoration: "none", color: "inherit" }}
