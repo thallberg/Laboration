@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const Daytour = ({ activity, price }) => {
+const DayTour = ({ activity, price }) => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -216,4 +216,4 @@ const Daytour = ({ activity, price }) => {
   );
 };
 
-export default Daytour;
+export default DayTour;

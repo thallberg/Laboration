@@ -2,20 +2,17 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Container, Box, Button } from "@mui/material";
 import UndoIcon from "@mui/icons-material/Undo";
-import infoCard from "../api/InfoCard.json";
+import BookingCard from "../api/BookingCard.json";
 import { Link } from "react-router-dom";
-import Daytour from "../Components/Formpage/Daytour";
-import Daytourfood from "../Components/Formpage/Daytourfood";
-import Daytourhouse from "../Components/Formpage/Daytourhouse";
+import DayTour from "../Components/Formpage/DayTour";
+import DayTourFood from "../Components/Formpage/DayTourFood";
+import DayTourHouse from "../Components/Formpage/DayTourHouse";
 
-
-
-
-const Bookingform = () => {
+const BookingForm = () => {
   const params = useParams();
   const id = params.id;
 
-  const selectedCard = infoCard.find((card) => card.id === id);
+  const selectedCard = BookingCard.find((card) => card.id === id);
 
   const price = selectedCard.price;
 
@@ -24,21 +21,16 @@ const Bookingform = () => {
   if (selectedCard) {
     switch (id) {
       case "1":
-        formComponent = (
-          <Daytour activity={selectedCard.title} price={price} />
-        );
+        formComponent = <DayTour activity={selectedCard.title} price={price} />;
         break;
       case "2":
         formComponent = (
-          <Daytourfood activity={selectedCard.title} price={price} />
+          <DayTourFood activity={selectedCard.title} price={price} />
         );
         break;
       case "3":
         formComponent = (
-          <Daytourhouse
-            activity={selectedCard.title}
-            price={price}
-          />
+          <DayTourHouse activity={selectedCard.title} price={price} />
         );
         break;
       default:
@@ -62,4 +54,4 @@ const Bookingform = () => {
   );
 };
 
-export default Bookingform;
+export default BookingForm;

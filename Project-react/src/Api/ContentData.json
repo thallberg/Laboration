@@ -1,0 +1,36 @@
+{
+  "about": {
+    "title": "Vår Passion för Isländska Hästar",
+    "icon": "/horse-icon.png",
+    "body1": "Vår gård är dedikerad till bevarandet och omvårdnaden av den unika och starka islandshästen. Med en rik historia i den isländska kulturen är vi stolta över att avla och träna hästar som förkroppsligar rasens anda och mångsidighet. Våra hästar är kända för sin gångart, karaktär och kärleksfulla temperament, vilket gör dem perfekta för både nybörjare och erfarna ryttare.",
+    "body2": "Oavsett om du är intresserad av ridning, träning eller bara vill uppleva skönheten hos dessa anmärkningsvärda djur, bjuder vi in dig att bli en del av vår isländska hästtradition.",
+    "images": ["/childandhorse.webp", "/childandhorse1.webp"]
+  },
+  "booking": {
+    "title": "Boka ditt besök",
+    "body1": "Upplev skönheten hos de isländska hästarna! Klicka på knappen nedan för att boka ditt besök. Följ med oss på en oförglömlig upplevelse med de isländska hästarna. Oavsett om du är intresserad av ridning eller bara vill lära dig mer om dessa otroliga djur, erbjuder vi olika bokningsalternativ som passar dina behov.",
+    "body2": "För att göra en bokning eller få mer information, klicka på knappen nedan för att gå vidare till vår bokningssida.",
+    "buttonText": "Boka nu",
+    "buttonLink": "/booking",
+    "images": ["/horse-booking-main.webp"]
+  },
+  "events": {
+    "title": "Turridning Vid Högtider",
+    "body1": "Vi erbjuder en mängd olika ridturer under hela året, med särskilda evenemang och temaridningar under högtider. Här kan du läsa mer om våra populära turer under påsken, midsommar, advent och fler!",
+    "images": ["/event1.webp", "/event2.webp", "/event3.webp", "/event4.webp"],
+    "eventDetails": {
+      "easter": {
+        "title": "Påskridning",
+        "body2": "Fira påsken med en fantastisk ridtur genom vår vackra gård. Upplev påskens fridfulla atmosfär medan du rider på våra isländska hästar.",
+        "body3": "Fira påsken på ett unikt sätt med en rogivande ridtur genom vår vackra gård och omgivande landskap. Våra isländska hästar, kända för sin stabilitet och lugna temperament, gör att även nybörjare kan känna sig trygga i sadeln. Under turen kommer vi att stanna för en kort fika där du kan njuta av lokala påskdelikatesser och höra spännande berättelser om påskens traditioner på gården. Denna tur är perfekt för familjer, par eller grupper som vill uppleva naturen på ett annorlunda och minnesvärt sätt. Vi rekommenderar att boka i god tid då platserna snabbt blir fullbokade under högtiden!",
+        "image": "/Easter1.webp"
+      },
+      "advent": {
+        "title": "Advent Ridning",
+        "body2": "Kom och upplev den lugna och vackra adventstiden. Rid genom vinterlandskapet med våra islandshästar och få en julig upplevelse.",
+        "body3": "Upplev adventstiden på ett magiskt sätt med en ridtur genom ett gnistrande vinterlandskap. Våra isländska hästar tar dig med på en fridfull resa genom snötäckta skogar och öppna ängar, där lugnet i naturen skapar en perfekt inramning för julens förväntan. Under turen gör vi ett stopp vid en varm eld där du kan njuta av pepparkakor, glögg och julmusik medan vi berättar om gårdens egna jultraditioner. Denna upplevelse är idealisk för både familjer och vänner som vill skapa nya minnen tillsammans under en av årets mest stämningsfulla tider. Missa inte chansen att låta advent bli något alldeles extra!",
+        "image": "/Advent1.webp"
+      }
+    }
+  }
+}

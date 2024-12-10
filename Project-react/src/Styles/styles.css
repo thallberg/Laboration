@@ -124,7 +124,7 @@ main {
 }
 
 .horse-icon1 img {
-  transform: scaleX(-1); 
+  transform: scaleX(-1);
 }
 
 .divider {
@@ -137,17 +137,16 @@ main {
 .about-section-image img {
   width: 45%;
   height: auto;
-  margin: auto!important;
- 
+  margin: auto !important;
 }
 
 .about-section-image {
- display: flex;
- justify-content: center;
- flex-direction: row;
- flex-wrap: wrap;
- margin-bottom: 0.8rem;
- margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .event-section-image {
@@ -163,13 +162,7 @@ main {
 .event-section-image img {
   width: 48%;
   max-width: 210px;
- 
 }
-
-
-
-
-
 
 .about-section,
 .booking-section,
@@ -206,10 +199,10 @@ main {
 }
 
 .Booking-section-image {
- display: flex;
- justify-content: center;
- margin-bottom: 0.8rem;
- margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .events-container {

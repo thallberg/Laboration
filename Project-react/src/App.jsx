@@ -5,7 +5,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
 import Booking from "./Pages/Booking";
-import Bookingform from "./Pages/Bookingform";
+import BookingForm from "./Pages/BookingForm";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/booking" element={<Booking />} />
-            <Route path="/booking-form/:id" element={<Bookingform />} />
+            <Route path="/BookingForm/:id" element={<BookingForm />} />
           </Routes>
         </main>
         <Footer />

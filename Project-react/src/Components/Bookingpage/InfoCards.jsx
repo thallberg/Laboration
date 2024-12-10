@@ -8,7 +8,7 @@ import {
   Box,
 } from "@mui/material";
 import React from "react";
-import Infocard from "../../api/Infocard.json";
+import BookingCard from "../../api/BookingCard.json";
 import { Link } from "react-router-dom";
 
 const InfoCards = () => {
@@ -19,7 +19,7 @@ const InfoCards = () => {
       columnSpacing={{ xs: 1, sm: 0, md: 0 }}
       className="Info-card-grid"
     >
-      {Infocard.map((card, index) => (
+      {BookingCard.map((card, index) => (
         <Grid2 size={{ xs: 12, sm: 6, md: 12 }} key={index}>
           <Card className="Info-card-content">
             <CardMedia
@@ -48,7 +48,7 @@ const InfoCards = () => {
                 </Button>
                 <Button
                   component={Link}
-                  to={"/Booking-form/" + card.id}
+                  to={"/BookingForm/" + card.id}
                   state={{
                     id: card.id,
                     activity: card.title,
