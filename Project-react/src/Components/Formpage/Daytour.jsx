@@ -14,9 +14,12 @@ import {
   DialogTitle,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useGlobalState } from "../../Api/GlobalStateContext"; 
 
 const DayTour = ({ activity, price }) => {
   const navigate = useNavigate();
+  
+  const { userData, setUserData, setBookingData } = useGlobalState();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -57,6 +60,23 @@ const DayTour = ({ activity, price }) => {
 
   const handleConfirm = () => {
     setOpenConfirmModal(false);
+
+    // Uppdatera användardata med bokningsdetaljer
+    setUserData({
+      ...userData,
+      bookingDetails: formData,
+    });
+
+    // Uppdatera globalt tillstånd med bokningen
+    setBookingData((prevData) => [
+      ...prevData,
+      {
+        activity,
+        price,
+        formData,
+      },
+    ]);
+
     setOpenSuccessModal(true);
   };
 
