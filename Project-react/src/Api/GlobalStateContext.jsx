@@ -2,22 +2,39 @@ import React, { createContext, useContext, useState } from "react";
 
 const GlobalStateContext = createContext();
 
-export const GlobalStateProvider = ({ children }) => {
-  const [userData, setUserData] = useState(null); 
-  const [bookings, setBookings] = useState([]);
+export const useGlobalState = () => useContext(GlobalStateContext);
 
-  
-  const setBookingData = (newBookingData) => {
-    setBookings((prevBookings) => [...prevBookings, newBookingData]);
-  };
+export const GlobalStateProvider = ({ children }) => {
+  const [userData, setUserData] = useState({});
+  const [bookingData, setBookingData] = useState([]);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    date: "",
+    time: "",
+    peopleCount: 1,
+    totalPrice: 0,
+  });
+  const [openConfirmModal, setOpenConfirmModal] = useState(false);
+  const [openSuccessModal, setOpenSuccessModal] = useState(false);
 
   return (
-    <GlobalStateContext.Provider value={{ userData, setUserData, bookings, setBookingData }}>
+    <GlobalStateContext.Provider
+      value={{
+        userData,
+        setUserData,
+        bookingData,
+        setBookingData,
+        formData,
+        setFormData,
+        openConfirmModal,
+        setOpenConfirmModal,
+        openSuccessModal,
+        setOpenSuccessModal,
+      }}
+    >
       {children}
     </GlobalStateContext.Provider>
   );
-};
-
-export const useGlobalState = () => {
-  return useContext(GlobalStateContext);
 };

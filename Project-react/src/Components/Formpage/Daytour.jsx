@@ -14,25 +14,22 @@ import {
   DialogTitle,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { useGlobalState } from "../../Api/GlobalStateContext"; 
+import { useGlobalState } from "../../Api/GlobalStateContext";
 
 const DayTour = ({ activity, price }) => {
   const navigate = useNavigate();
-  
-  const { userData, setUserData, setBookingData } = useGlobalState();
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    date: "",
-    time: "",
-    peopleCount: 1,
-    totalPrice: price,
-  });
-
-  const [openConfirmModal, setOpenConfirmModal] = useState(false);
-  const [openSuccessModal, setOpenSuccessModal] = useState(false);
+  const {
+    userData,
+    setUserData,
+    setBookingData,
+    formData,
+    setFormData,
+    openConfirmModal,
+    setOpenConfirmModal,
+    openSuccessModal,
+    setOpenSuccessModal,
+  } = useGlobalState();
 
   useEffect(() => {
     setFormData((prevData) => ({
@@ -61,13 +58,11 @@ const DayTour = ({ activity, price }) => {
   const handleConfirm = () => {
     setOpenConfirmModal(false);
 
-    // Uppdatera användardata med bokningsdetaljer
     setUserData({
       ...userData,
       bookingDetails: formData,
     });
 
-    // Uppdatera globalt tillstånd med bokningen
     setBookingData((prevData) => [
       ...prevData,
       {
