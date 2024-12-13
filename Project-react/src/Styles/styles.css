@@ -18,6 +18,11 @@ body {
   );
 }
 
+.activity-image {
+  max-width: 100%;
+  height: auto; /* Se till att bildens höjd anpassas korrekt */
+}
+
 html,
 #root {
   height: 100%;

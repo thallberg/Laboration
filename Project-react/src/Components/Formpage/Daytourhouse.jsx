@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const DayTourHouse = ({ activity, price }) => {
+const DayTourHouse = ({ activity, price, image }) => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
