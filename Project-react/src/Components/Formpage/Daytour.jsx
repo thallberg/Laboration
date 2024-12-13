@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
   TextField,
   Button,
@@ -42,7 +42,7 @@ const DayTour = ({ activity, price }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: name === "peopleCount" ? Math.max(1, parseInt(value, 10)) : value,
+      [name]: value,
     });
   };
 
@@ -164,7 +164,7 @@ const DayTour = ({ activity, price }) => {
             label="Antal personer"
             variant="outlined"
             name="peopleCount"
-            value={formData.peopleCount}
+            value={formData.peopleCount?.toString() || ''}
             onChange={handleChange}
             type="number"
           />

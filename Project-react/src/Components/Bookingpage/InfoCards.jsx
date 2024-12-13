@@ -12,11 +12,8 @@ import BookingCard from "../../api/BookingCard.json";
 import { Link } from "react-router-dom";
 import { useGlobalState } from "../../Api/GlobalStateContext";
 
-
-
-
 const InfoCards = () => {
-  const { setBookingData } = useGlobalState();  
+  const { setBookingData } = useGlobalState();
 
   const handleBooking = (card) => {
     setBookingData((prev) => [
