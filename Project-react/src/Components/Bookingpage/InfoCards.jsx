@@ -10,8 +10,24 @@ import {
 import React from "react";
 import BookingCard from "../../api/BookingCard.json";
 import { Link } from "react-router-dom";
+import { useGlobalState } from "../../Api/GlobalStateContext";
 
 const InfoCards = () => {
+  const { setBookingData } = useGlobalState();
+
+  const handleBooking = (card) => {
+    setBookingData((prev) => [
+      ...prev,
+      {
+        id: card.id,
+        title: card.title,
+        price: card.price,
+        description: card.description,
+        image: card.image,
+      },
+    ]);
+  };
+
   return (
     <Grid2
       container

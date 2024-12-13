@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
   TextField,
   Button,
@@ -14,22 +14,22 @@ import {
   DialogTitle,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useGlobalState } from "../../Api/GlobalStateContext";
 
 const DayTour = ({ activity, price }) => {
   const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    date: "",
-    time: "",
-    peopleCount: 1,
-    totalPrice: price,
-  });
-
-  const [openConfirmModal, setOpenConfirmModal] = useState(false);
-  const [openSuccessModal, setOpenSuccessModal] = useState(false);
+  const {
+    userData,
+    setUserData,
+    setBookingData,
+    formData,
+    setFormData,
+    openConfirmModal,
+    setOpenConfirmModal,
+    openSuccessModal,
+    setOpenSuccessModal,
+  } = useGlobalState();
 
   useEffect(() => {
     setFormData((prevData) => ({
@@ -42,7 +42,7 @@ const DayTour = ({ activity, price }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: name === "peopleCount" ? Math.max(1, parseInt(value, 10)) : value,
+      [name]: value,
     });
   };
 
@@ -57,6 +57,21 @@ const DayTour = ({ activity, price }) => {
 
   const handleConfirm = () => {
     setOpenConfirmModal(false);
+
+    setUserData({
+      ...userData,
+      bookingDetails: formData,
+    });
+
+    setBookingData((prevData) => [
+      ...prevData,
+      {
+        activity,
+        price,
+        formData,
+      },
+    ]);
+
     setOpenSuccessModal(true);
   };
 
@@ -149,7 +164,7 @@ const DayTour = ({ activity, price }) => {
             label="Antal personer"
             variant="outlined"
             name="peopleCount"
-            value={formData.peopleCount}
+            value={formData.peopleCount?.toString() || ''}
             onChange={handleChange}
             type="number"
           />

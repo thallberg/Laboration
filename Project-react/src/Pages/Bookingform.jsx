@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { Container, Box, Button } from "@mui/material";
 import UndoIcon from "@mui/icons-material/Undo";
 import BookingCard from "../api/BookingCard.json";
@@ -10,11 +10,10 @@ import DayTourHouse from "../Components/Formpage/DayTourHouse";
 
 const BookingForm = () => {
   const params = useParams();
-  const id = params.id;
+  const { state } = useLocation();
+  const { id, activity, price, description, image } = state;
 
   const selectedCard = BookingCard.find((card) => card.id === id);
-
-  const price = selectedCard.price;
 
   let formComponent = null;
 

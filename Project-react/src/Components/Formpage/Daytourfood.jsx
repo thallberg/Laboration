@@ -14,23 +14,20 @@ import {
   DialogTitle,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useGlobalState } from "../../Api/GlobalStateContext";
 
 const DayTourFood = ({ activity, price, image }) => {
   const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    date: "",
-    time: "",
-    peopleCount: 1,
-    totalPrice: price,
-    meal: "",
-  });
-
-  const [openConfirmModal, setOpenConfirmModal] = useState(false);
-  const [openSuccessModal, setOpenSuccessModal] = useState(false);
+  const {
+    formData,
+    setFormData,
+    setBookingData,
+    openConfirmModal,
+    setOpenConfirmModal,
+    openSuccessModal,
+    setOpenSuccessModal,
+  } = useGlobalState();
 
   useEffect(() => {
     setFormData((prevData) => ({
@@ -43,7 +40,7 @@ const DayTourFood = ({ activity, price, image }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: name === "peopleCount" ? Math.max(1, parseInt(value, 10)) : value,
+      [name]: value,
     });
   };
 
@@ -58,6 +55,17 @@ const DayTourFood = ({ activity, price, image }) => {
 
   const handleConfirm = () => {
     setOpenConfirmModal(false);
+    
+   
+    setBookingData((prevData) => [
+      ...prevData,
+      {
+        activity,
+        price,
+        formData,
+      },
+    ]);
+
     setOpenSuccessModal(true);
   };
 
@@ -149,7 +157,7 @@ const DayTourFood = ({ activity, price, image }) => {
             label="Antal personer"
             variant="outlined"
             name="peopleCount"
-            value={formData.peopleCount}
+            value={formData.peopleCount?.toString() || ''}
             onChange={handleChange}
             type="number"
           />
@@ -161,7 +169,7 @@ const DayTourFood = ({ activity, price, image }) => {
             <Select
               label="Välj maträtt"
               name="meal"
-              value={formData.meal}
+              value={formData.meal || ''}
               onChange={handleChange}
             >
               <MenuItem value="Fisk">Fisksoppa</MenuItem>
